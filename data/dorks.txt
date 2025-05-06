@@ -1,0 +1,33 @@
+site:{domain} inurl:admin
+site:{domain} inurl:login
+site:{domain} inurl:auth
+site:{domain} inurl:robots.txt
+site:{domain} intitle:"index of"
+site:{domain} inurl:/backup/
+site:{domain} inurl:/old/
+site:{domain} inurl:/dev/
+site:{domain} ext:sql
+site:{domain} ext:env
+site:{domain} ext:log
+site:{domain} ext:bak
+site:{domain} filetype:conf
+site:{domain} filetype:json
+site:{domain} filetype:ini
+site:{domain} intext:"password"
+site:{domain} intext:"confidential"
+site:{domain} filetype:txt intext:credentials
+site:{domain} inurl:config
+site:{domain} inurl:settings
+site:{domain} intitle:"phpinfo"
+site:{domain} intitle:"Apache2 Ubuntu Default Page"
+site:{domain} inurl:test
+site:{domain} inurl:debug
+site:{domain} filetype:pdf confidential
+site:{domain} filetype:xls intext:email
+site:{domain} filetype:docx intext:project
+site:{domain} filetype:log intext:error
+site:{domain} filetype:txt intext:api_key
+site:{domain} filetype:json intext:token
+site:{domain} inurl:wp-content
+site:{domain} inurl:.git
+site:{domain} intitle:"Welcome to nginx!"
