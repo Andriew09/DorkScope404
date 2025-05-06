@@ -1,11 +1,24 @@
+# Accès Admin / Authentification
 site:{domain} inurl:admin
 site:{domain} inurl:login
 site:{domain} inurl:auth
-site:{domain} inurl:robots.txt
+site:{domain} intitle:"admin panel"
+site:{domain} inurl:wp-admin
+site:{domain} inurl:admin.php
+site:{domain} inurl:/administrator/
+
+# Répertoires exposés
 site:{domain} intitle:"index of"
 site:{domain} inurl:/backup/
 site:{domain} inurl:/old/
 site:{domain} inurl:/dev/
+site:{domain} inurl:/test/
+site:{domain} inurl:/debug/
+site:{domain} inurl:/data/
+site:{domain} inurl:/docs/
+site:{domain} inurl:/logs/
+
+# Fichiers sensibles
 site:{domain} ext:sql
 site:{domain} ext:env
 site:{domain} ext:log
@@ -13,21 +26,62 @@ site:{domain} ext:bak
 site:{domain} filetype:conf
 site:{domain} filetype:json
 site:{domain} filetype:ini
+site:{domain} filetype:yml
+site:{domain} filetype:xml
+site:{domain} filetype:txt
+site:{domain} filetype:csv
+
+# Informations internes
 site:{domain} intext:"password"
 site:{domain} intext:"confidential"
 site:{domain} filetype:txt intext:credentials
 site:{domain} inurl:config
 site:{domain} inurl:settings
+site:{domain} intext:"API_KEY"
+site:{domain} intext:"secret_key"
+site:{domain} inurl:"/.env"
+site:{domain} inurl:"/config.json"
+site:{domain} inurl:"/settings.xml"
+
+# Interfaces techniques
 site:{domain} intitle:"phpinfo"
 site:{domain} intitle:"Apache2 Ubuntu Default Page"
-site:{domain} inurl:test
-site:{domain} inurl:debug
+site:{domain} intitle:"Welcome to nginx!"
+site:{domain} intitle:"nginx"
+site:{domain} intitle:"index of /test"
+site:{domain} inurl:/test
+site:{domain} inurl:/debug
+site:{domain} inurl:/server-status
+site:{domain} inurl:/webdav/
+
+# Divers / OSINT
 site:{domain} filetype:pdf confidential
 site:{domain} filetype:xls intext:email
 site:{domain} filetype:docx intext:project
-site:{domain} filetype:log intext:error
-site:{domain} filetype:txt intext:api_key
-site:{domain} filetype:json intext:token
+site:{domain} filetype:csv intext:"name,email"
+site:{domain} filetype:txt intext:"phone"
+site:{domain} filetype:pdf intext:"confidential"
+site:{domain} filetype:txt intext:"social security number"
+site:{domain} inurl:/private/
+
+# Recherche de données exposées par des erreurs
+site:{domain} intitle:"500 Internal Server Error"
+site:{domain} intitle:"404 Not Found"
+site:{domain} intitle:"403 Forbidden"
+site:{domain} inurl:"/debug/"
+site:{domain} inurl:"/error_log"
+site:{domain} inurl:"/web-log"
+
+# Recherche d'applications exposées
 site:{domain} inurl:wp-content
-site:{domain} inurl:.git
-site:{domain} intitle:"Welcome to nginx!"
+site:{domain} inurl:wp-includes
+site:{domain} inurl:wp-admin
+site:{domain} inurl:wp-login.php
+site:{domain} inurl:adminer
+site:{domain} inurl:phpmyadmin
+
+# Recherche d'erreurs communes
+site:{domain} intext:"unable to connect to database"
+site:{domain} intext:"unable to find file"
+site:{domain} intext:"error opening file"
+site:{domain} intext:"failed to load"
