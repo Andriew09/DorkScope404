@@ -10,7 +10,7 @@ def menu_principal():
         choix = input("Choisissez une option : ")
 
         if choix == "1":
-            domaine = input("Entrez le domaine (ex : facebook.com) : ")
+            domaine = input("Entrez le domaine cible ")
             dorks = generer_tous_les_dorks(domaine)
             print("\nDorks générés :\n")
             for dork in dorks:
